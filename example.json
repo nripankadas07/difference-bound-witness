@@ -1,0 +1,27 @@
+{
+  "variables": [
+    "start",
+    "handoff",
+    "finish"
+  ],
+  "constraints": [
+    {
+      "id": "handoff-min3",
+      "from": "handoff",
+      "to": "start",
+      "max": -3
+    },
+    {
+      "id": "finish-min4",
+      "from": "finish",
+      "to": "handoff",
+      "max": -4
+    },
+    {
+      "id": "finish-max6",
+      "from": "start",
+      "to": "finish",
+      "max": 6
+    }
+  ]
+}

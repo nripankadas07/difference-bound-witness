@@ -1,0 +1,138 @@
+{
+  "query": {
+    "query": "difference constraints sort:stars-desc",
+    "observed": "2026-10-22T06:18:36.315Z",
+    "url": "https://github.com/search?q=difference%20constraints%20sort%3Astars-desc&type=repositories",
+    "results": [
+      "ORB-HD/rbdl-orb",
+      "DarthUtopian/tdmpc_square_public",
+      "DDZH-DEV/mysql-struct-sync",
+      "suvo-ee16s073/Stackelberg-Game-with-constraint",
+      "kylejginavan/heroku_clonedb",
+      "freekdh/cspc520-ml-course",
+      "alfredwallac3/CodeWeavex.NET-Demo",
+      "ahmtcnbs/DuplicateImageDetection",
+      "iOSifMol/DifferenceLeadingLeft",
+      "NewportDataPortal/RIGIS-continually-updated-shoreline-product"
+    ],
+    "error": null
+  },
+  "comparables": [
+    {
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx",
+      "stars": 17347,
+      "pushed_at": "2026-10-22T00:46:41Z",
+      "archived": false,
+      "default_branch": "main",
+      "license_metadata": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "observed": "2026-10-22T06:19:50.613Z",
+      "workflow": "Python graph algorithms including a negative-cycle witness; pip installation and documented examples.",
+      "sampled_open_items": [
+        {
+          "number": 8967,
+          "title": "Fix false-positive failure in spanning arborescence algorithms (#8964)",
+          "url": "https://github.com/networkx/networkx/pull/8967",
+          "body_excerpt": "Fixes #8964\n\n### Problem\nIn `minimum_spanning_arborescence` (via `minimal_branching`) and `maximum_spanning_arborescence`, edge weights were shifted by a constant `C` hardcoded for 2 vertices:\n- In `minimal_branching`: `C = 2 * max_weight - min_weight + 1`\n- In `maximum_spanning_arborescence`: `C = max_weight - 2 * min_weight + 1`\n\nWhen `n >= 3`, a non-spanning branching with `k >= 2` trees has at"
+        },
+        {
+          "number": 8966,
+          "title": "Fix weight shifts in spanning arborescence functions",
+          "url": "https://github.com/networkx/networkx/pull/8966",
+          "body_excerpt": "Fixes #8964.\r\n\r\n`minimum_spanning_arborescence` and `maximum_spanning_arborescence` raise `NetworkXException: No ... spanning arborescence in G` on graphs that have one (regression since 3.2).\r\n\r\nCause: both functions shift edge weights and take a maximum branching, relying on that branching being spanning. A branching with k edges totals `k*C - w(B)` (minimum) or `w(B) + k*C` (maximum), so the sh"
+        },
+        {
+          "number": 8965,
+          "title": "Speed up Graph/MultiGraph copy() by not iterating undirected edges twice",
+          "url": "https://github.com/networkx/networkx/pull/8965",
+          "body_excerpt": "heyhi\r\n\r\n## What\r\n\r\n`copy()` passes the full `self._adj` to `add_edges_from`. For an undirected graph that lists every edge from both endpoints, and `add_edges_from` already populates both directions, so the second pass just re-copies each edge's data and overwrites the entry it already created. This emits each undirected edge once instead.\r\n\r\nApplied to both `Graph.copy` (also used by `DiGraph`) "
+        }
+      ]
+    },
+    {
+      "repo": "google/or-tools",
+      "url": "https://github.com/google/or-tools",
+      "stars": 14244,
+      "pushed_at": "2026-10-21T10:10:54Z",
+      "archived": false,
+      "default_branch": "stable",
+      "license_metadata": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "observed": "2026-10-22T06:19:50.287Z",
+      "workflow": "C++ optimization suite with Python/.NET/Java APIs and solver-specific installation and examples.",
+      "sampled_open_items": [
+        {
+          "number": 5519,
+          "title": "Resource: verified optima + 2x-rerun deterministic verifier for binpacking/TSP/JSSP/cache (free 5-instance smoke pack)",
+          "url": "https://github.com/google/or-tools/issues/5519",
+          "body_excerpt": "Not a support question \u2014 an offer of a dataset.\n\nI maintain a combinatorial-optimization benchmark (bin-packing 2D/3D, TSP, JSSP, cache eviction) where each instance ships with a **deterministic verifier** that re-solves from scratch, and an instance is only accepted if **2 independent reruns agree** on the score. Every instance has a recorded sha256; difficulty is calibrated by measured solve-gap"
+        },
+        {
+          "number": 5498,
+          "title": "CP-SAT: `fixed` worker returns an infeasible \"OPTIMAL\" from its hint search after importing a shared objective bound; final checker LOG(FATAL)s (`Infeasible solution! source: 'fixed [hint]'`)",
+          "url": "https://github.com/google/or-tools/issues/5498",
+          "body_excerpt": "**What version of OR-Tools and what language are you using?**\nVersion: main at 7900276812fcf70b49c23efe17705843b9c0ce6d (2026-10-16), built from source (wheel 10.0.9999). Also 893ef58d (2026-09-19). **Not** on PyPI 9.15.6755.\nLanguage: Python\n\n**Which solver are you using?** CP-SAT\n\n**What operating system and version?** Linux x86_64 (Ubuntu 22.04)\n\n**What did you do?**\nRan the script below: three"
+        },
+        {
+          "number": 5492,
+          "title": "WIP: Add MOSEK Support",
+          "url": "https://github.com/google/or-tools/pull/5492",
+          "body_excerpt": "Add support for MOSEK Stable API (this is introduced by MOSEK 12.0 beta).  The MOSEK Stable API that will remain unchanged for multiple versions, at least 12.x and 13.x.\n\nSupport for LP+MIP for linear_solver (not QP), and for math_opt.\n\nSupport is still incomplete:\n- Many tests are failing \n- No support for basis solutions\n- Not all tests are integrated\n- Some things are missing for Python.\n- Java"
+        }
+      ]
+    },
+    {
+      "repo": "Z3Prover/z3",
+      "url": "https://github.com/Z3Prover/z3",
+      "stars": 12807,
+      "pushed_at": "2026-10-22T05:39:30Z",
+      "archived": false,
+      "default_branch": "master",
+      "license_metadata": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "observed": "2026-10-22T06:19:50.422Z",
+      "workflow": "SMT theorem prover with binaries, bindings and richer theories; README states MIT while GitHub metadata is inconclusive.",
+      "sampled_open_items": [
+        {
+          "number": 11259,
+          "title": "build(deps-dev): bump markdown-it from 14.3.2 to 14.3.3 in /src/api/js",
+          "url": "https://github.com/Z3Prover/z3/pull/11259",
+          "body_excerpt": "Bumps [markdown-it](https://github.com/markdown-it/markdown-it) from 14.3.2 to 14.3.3.\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/markdown-it/markdown-it/blob/14.3.3/CHANGELOG.md\">markdown-it's changelog</a>.</em></p>\n<blockquote>\n<h2>[14.3.3] - 2026-10-16</h2>\n<h3>Security</h3>\n<ul>\n<li>Backported 15.0.3 fixes.</li>\n</ul>\n</blockquote>\n</details>\n<detai"
+        },
+        {
+          "number": 11257,
+          "title": "`ackr-bound-probe` not registered in static libz3 builds after #10840",
+          "url": "https://github.com/Z3Prover/z3/issues/11257",
+          "body_excerpt": "I am attempting to upgrade the z3 rust bindings to master @ 2e8d6ed80. Our `vendored` build (performing a from-source build of z3 into a static library) no longer has `ackr-bound-probe` registered, which tripped up a unit test. `Z3_probe_get_descr(ctx, \"ackr-bound-probe\")` returns `\"\"`, and the probe is missing from `Z3_get_num_probes` / `Z3_get_probe_name`. The other 41 probes declared with `Z3_A"
+        },
+        {
+          "number": 11256,
+          "title": "lp: cut per-pivot and per-bound costs; lift ite terms out of arithmetic for QF_LRA",
+          "url": "https://github.com/Z3Prover/z3/pull/11256",
+          "body_excerpt": "Follow-up to #11253. With row propagation off, z3's search on the QF_LRA uart family matches yices almost exactly (595k vs 599k decisions, 52k vs 50k conflicts), yet z3 took 7.7s vs 3.1s on uart-30. The remaining gap was engine cost per unit of search. This PR removes the largest items found by sampling profiles and enables if-then-else lifting for QF_LRA.\n\n## Number layer (`mpz`, `mpq`, `rational"
+        }
+      ]
+    }
+  ],
+  "highest_star_relevant_found": "networkx/networkx",
+  "primary_sources": [
+    "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.find_negative_cycle.html"
+  ],
+  "scope": "Scoped live stars-desc GitHub keyword search, supplemented with established relevant alternatives after README/docs/source inspection; not an exhaustive global ranking. No competitor installs, timing, reliability or support response were measured. Sampled open items can include PRs; none is treated as demand for this new tool."
+}
