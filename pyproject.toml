@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "difference-bound-witness"
+version = "0.1.0"
+description = "Produce a feasible integer assignment or an edge-ID negative-cycle contradiction for difference constraints."
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = []
+[project.scripts]
+difference-bound-witness = "difference_bound_witness:main"
+[tool.setuptools]
+py-modules = ["difference_bound_witness"]

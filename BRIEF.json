@@ -1,0 +1,37 @@
+{
+  "repo": "difference-bound-witness",
+  "user": "Release planners debugging relative minimum/maximum timing rules.",
+  "pain": "A set of individually plausible timing rules can be mutually impossible, without showing the exact contradictory bounds.",
+  "capability": "Produce a feasible integer assignment or an edge-ID negative-cycle contradiction for difference constraints.",
+  "alternatives": [
+    "networkx/networkx",
+    "google/or-tools",
+    "Z3Prover/z3"
+  ],
+  "query": "difference constraints sort:stars-desc",
+  "distinct": "activity-slack-report computes critical paths on a precedence DAG with durations. This is an independent numeric constraint satisfiability tool with two-sided relative bounds encoded as edges and contradictory-cycle proofs, including cyclic feasible systems. No task durations, CPM or slack scheduling UI is reproduced.",
+  "limits": "100 variables,1000 constraints, input integers within +/-10^12. Each edge means x[to]-x[from]<=max. Encode a minimum L by reversing an edge with max=-L. Variables are free up to translation; assignments are normalized so their minimum is0, not anchored absolute dates. No calendars, optimal makespan, resources, mixed nonlinear constraints or minimal unsatisfiable core. The returned negative cycle is sufficient but need not be smallest.",
+  "expected": "The invented three-bound example proves 0<=-1, and lists the responsible edge IDs.",
+  "checks": "27 weighted cycles against independent Floyd-Warshall, disconnected/parallel/self-loop bounds, assignment/slack checks and invalid schemas.",
+  "primary": [
+    "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.find_negative_cycle.html"
+  ],
+  "topics": [
+    "constraints",
+    "scheduling",
+    "bellman-ford",
+    "python"
+  ],
+  "occurrence": "GH-20261022",
+  "state": "VALIDATED",
+  "demand": "Inferred workflow need; no verified request for this new product.",
+  "inventory_compared": 213,
+  "acceptance": [
+    "The invented three-bound example proves 0<=-1, and lists the responsible edge IDs.",
+    "27 weighted cycles against independent Floyd-Warshall, disconnected/parallel/self-loop bounds, assignment/slack checks and invalid schemas.",
+    "Clean wheel-installed console outside checkout; meaningful malformed input and source preservation."
+  ],
+  "discovery": "Searchable problem-focused README/topics and runnable invented fixture, no outreach or adoption promise.",
+  "originality": "Original AI-assisted implementation; standard algorithms independently reimplemented, no third-party code/prose copied.",
+  "mutual_distinction": "Numeric constraints, concurrent register semantics, WAV cue references, ASN.1 byte boundaries and raster-mask topology are separate users, inputs and contracts."
+}
